@@ -52,11 +52,11 @@ export function activate(context: vscode.ExtensionContext) {
   );
   context.subscriptions.push(createPluginCommand);
 
-  const createPluginFromTemplateCommand = vscode.commands.registerCommand(
+  const openProjectTemplateCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.template",
-    flexCommand.createPluginWithTemplate
+    flexCommand.openProjectTemplate
   );
-  context.subscriptions.push(createPluginFromTemplateCommand);
+  context.subscriptions.push(openProjectTemplateCommand);
 
   const deployPluginCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.deploy",

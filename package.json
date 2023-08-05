@@ -83,7 +83,7 @@
       },
       {
         "command": "twilio-flex.plugins.template",
-        "title": "Twilio Flex: Create plugin with Template"
+        "title": "Twilio Flex: Open Flex Project Template"
       },
       {
         "command": "twilio-flex.plugins.deploy",

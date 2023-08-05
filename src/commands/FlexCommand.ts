@@ -78,18 +78,15 @@ class FlexCommand {
     });
   }
 
-  async createPluginWithTemplate() {
-    const pluginName = await getPluginName();
-    if (!pluginName) {
-      return;
-    }
+  async openProjectTemplate() {
+    const name = "flex-project-template";
 
     const destinationFolder = await getDestinationFolder();
     if (!destinationFolder) {
       return;
     }
 
-    const destination = resolve(destinationFolder, pluginName);
+    const destination = resolve(destinationFolder, name);
 
     const repository = degit(FLEX_PROJECT_TEMPLATE_SLUG);
 
@@ -97,7 +94,7 @@ class FlexCommand {
       await window.withProgress(
         {
           location: ProgressLocation.Notification,
-          title: "Creating new plugin...",
+          title: "Downloading project template...",
           cancellable: false,
         },
         (progress, token) => {
@@ -113,7 +110,7 @@ class FlexCommand {
         }
       );
     } catch {
-      window.showErrorMessage(`Error fetching template from GitHub.`);
+      window.showErrorMessage(`Error downloading project template.`);
     }
   }
 
