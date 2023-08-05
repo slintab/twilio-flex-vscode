@@ -25,15 +25,13 @@ directly from VSCode!:cowboy_hat_face:
 ## Setup
 
 1. Ensure that you have the following dependencies installed:
-    - **VSCode** version 1.80 or greater ([link](https://code.visualstudio.com/))
     - **Node** ([link](https://nodejs.org/en))
+    - **VSCode** version 1.80 or greater ([link](https://code.visualstudio.com/))
+    - **VSCode Extension Manager** (`npm install -g @vscode/vsce`)
     - **Twilio CLI** ([link](https://www.twilio.com/docs/twilio-cli/quickstart))
     - **Flex Plugins CLI**  ([link](https://www.twilio.com/docs/flex/developer/plugins/cli/install))
-
-2. Install [Yeoman](https://yeoman.io/), via: `npm install -g yo`
-3. Install the [VSCode Extension Manager](https://github.com/microsoft/vscode-vsce), via: `npm install -g @vscode/vsce`
-4. From the repository's root directory, generate an extension file with the command  `vsce package`. This will create a `.vsix` file.
-5. Import the `.vsix` file from the previous step with `code --install-extension <EXTENSION_FILE>.vsix`
+2. From the repository's root directory, generate an extension file with the command  `vsce package`. This will create a `.vsix` file.
+3. Import the `.vsix` file from the previous step with `code --install-extension <EXTENSION_FILE>.vsix`
 
 
 ## Maintainer
