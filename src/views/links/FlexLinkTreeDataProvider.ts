@@ -28,8 +28,10 @@ export class FlexLinkTreeDataProvider implements TreeDataProvider<TreeItem> {
   createLinks() {
     const linkAttributes: [string, string][] = [
       ["Admin Dashboard", "twilio-flex.links.dashboard"],
+      ["Plugin Dashboard", "twilio-flex.links.plugins"],
       ["Twilio Console", "twilio-flex.links.console"],
-      ["Documentation", "twilio-flex.links.docs"],
+      ["API Reference", "twilio-flex.links.api"],
+      ["Flex Documentation", "twilio-flex.links.docs"],
     ];
 
     const links = linkAttributes.map((element) => {

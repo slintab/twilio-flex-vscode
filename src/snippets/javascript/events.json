@@ -1,0 +1,99 @@
+{
+    "viewResized": {
+        "prefix": "Twilio Flex Event: viewResized",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"viewResized\", () => {});"
+    },
+    "flexSplitterResize": {
+        "prefix": "Twilio Flex Event: flexSplitterResize",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"flexSplitterResize\", () => {});"
+    },
+    "userLoggedIn": {
+        "prefix": "Twilio Flex Event: userLoggedIn",
+        "body": "import * as Flex from \"@twilio/flex-ui\";\nFlex.Manager.events.addListener(\"userLoggedIn\", () => {});\n// Note: since the userLoggedIn event occurs before instantiation of manager, listeners for this event are added to the class itself."
+    },
+    "selectedViewChanged": {
+        "prefix": "Twilio Flex Event: selectedViewChanged",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"selectedViewChanged\", (viewName) => {});"
+    },
+    "tokenUpdated": {
+        "prefix": "Twilio Flex Event: tokenUpdated",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"tokenUpdated\", (tokenPayload) => {});"
+    },
+    "tokenExpired": {
+        "prefix": "Twilio Flex Event: tokenExpired",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"tokenExpired\", () => {});"
+    },
+    "pluginsLoaded": {
+        "prefix": "Twilio Flex Event: pluginsLoaded",
+        "body": "import * as Flex from \"@twilio/flex-ui\";\nFlex.Manager.events.addListener(\"pluginsLoaded\", () => {});\n// Note: since the pluginsLoaded event occurs before instantiation of manager, listeners for this event are added to the class itself."
+    },
+    "pluginsInitialized": {
+        "prefix": "Twilio Flex Event: pluginsInitialized",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"pluginsInitialized\", () => {});"
+    },
+    "chatChannelJoining": {
+        "prefix": "Twilio Flex Event: chatChannelJoining",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"chatChannelJoining\", () => {});"
+    },
+    "connectionStateChanged": {
+        "prefix": "Twilio Flex Event: connectionStateChanged",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"connectionStateChanged\", () => {});"
+    },
+    "error": {
+        "prefix": "Twilio Flex Event: error",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"flexError\", () => {});"
+    },
+    "sessionValidated": {
+        "prefix": "Twilio Flex Event: sessionValidated",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"sessionValidated\", () => {});"
+    },
+    "sessionInvalidated": {
+        "prefix": "Twilio Flex Event: sessionInvalidated",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"sessionInvalidated\", () => {});"
+    },
+    "taskReceived": {
+        "prefix": "Twilio Flex Event: taskReceived",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskReceived\", (task) => {});"
+    },
+    "workerActivityUpdated": {
+        "prefix": "Twilio Flex Event: workerActivityUpdated",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"workerActivityUpdated\", (activity, allActivities) => {});"
+    },
+    "workerAttributesUpdated": {
+        "prefix": "Twilio Flex Event: workerAttributesUpdated",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"workerAttributesUpdated\", (newAttributes) => {});"
+    },
+    "taskUpdated": {
+        "prefix": "Twilio Flex Event: taskUpdated",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskUpdated\", (task) => {});"
+    },
+    "taskAccepted": {
+        "prefix": "Twilio Flex Event: taskAccepted",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskAccepted\", (task) => {});"
+    },
+    "taskCanceled": {
+        "prefix": "Twilio Flex Event: taskCanceled",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskCanceled\", (task) => {});"
+    },
+    "taskCompleted": {
+        "prefix": "Twilio Flex Event: taskCompleted",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskCompleted\", (task) => {});"
+    },
+    "taskRejected": {
+        "prefix": "Twilio Flex Event: taskRejected",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskRejected\", (task) => {});"
+    },
+    "taskRescinded": {
+        "prefix": "Twilio Flex Event: taskRescinded",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskRescinded\", (task) => {});"
+    },
+    "taskTimeout": {
+        "prefix": "Twilio Flex Event: taskTimeout",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskTimeout\", (task) => {});"
+    },
+    "taskWrapup": {
+        "prefix": "Twilio Flex Event: taskWrapup",
+        "body": "import { Manager } from \"@twilio/flex-ui\";\nconst manager = Manager.getInstance();\nmanager.events.addListener(\"taskWrapup\", (task) => {});"
+    }
+
+}

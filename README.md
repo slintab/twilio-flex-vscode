@@ -1,71 +1,42 @@
-# twilio-flex-vscode README
+# Twilio Flex VSCode
 
-This is the README for your extension "twilio-flex-vscode". After writing up a brief description, we recommend including the following sections.
+This is a VSCode extension for Twilio Flex.
+
+## Disclamer
+Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT.**. Some features may not work or not work correctly :warning: 
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Currently, the extension can be used to:
 
-For example if there is an image subfolder under your extension project workspace:
+* [Create Flex Plugins](###feature-create)
+* [Deploy Flex Plugins](###feature-deploy)
+* [Run Flex Plugins](###feature-run)
+* [Manage Flex Plugins](###feature-manage)
+* [Develop with the Flex Project Template](###feature-template)
+* [Access documentation and relevant links](###feature-links)
+* [Access code snippets for common tasks](###feature-snippets)
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
+directly from VSCode! P:cowboy_hat_face:	
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+## Setup
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Ensure that you have the following dependencies installed:
+    - **VSCode** version 1.80 or greater ([link](https://code.visualstudio.com/))
+    - **Node** ([link](https://nodejs.org/en))
+    - **Twilio CLI** (instructions [here](https://www.twilio.com/docs/twilio-cli/quickstart))
+    - **Flex Plugins CLI**  (instructions [here](https://www.twilio.com/docs/flex/developer/plugins/cli/install))
 
-For example:
+2. Install [Yeoman](https://yeoman.io/), via: `npm install -g yo`
+3. Install the [VSCode Extension Manager](https://github.com/microsoft/vscode-vsce), via: `npm install -g @vscode/vsce`
+4. From the repository's root directory, generate an extension file with the command  `vsce package`. This will create a `.vsix` file.
+5. Import the `.vsix` file from the previous step with `code --install-extension <EXTENSION_FILE>.vsix`
 
-This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Maintainer
 
-## Known Issues
+Thanks for reading this far! If you have any questions, do not hesitate to reach out at hello@slintab.dev
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

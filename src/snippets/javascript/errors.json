@@ -1,0 +1,10 @@
+{
+    "processError": {
+        "prefix": "Twilio Flex ErrorManager: processError",
+        "body": "ErrorManager.processError(new FlexError(\"no connection\", {description: \"There was no internet connection\"})); // creates and processes an error"
+    },
+    "createAndProcessError": {
+        "prefix": "Twilio Flex ErrorManager: createAndProcessError",
+        "body": "ErrorManager.createAndProcessError( \"no connection\",  {description: \"There was no internet connection\", context:\"some context\"});"
+    }
+}

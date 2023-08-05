@@ -1,0 +1,238 @@
+{
+    "StartOutboundCall": {
+      "prefix": "Twilio Flex Action: StartOutboundCall",
+      "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"StartOutboundCall\", {\n      destination: \"+1234567\",\n      queueSid: \"WQXXXXXXXXXXXXXXXXX\"\n});"
+    },
+    "ToggleOutboundDialer": {
+        "prefix": "Twilio Flex Action: ToggleOutboundDialer",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ToggleOutboundDialer\");"
+    },
+    "NavigateToView": {
+        "prefix": "Twilio Flex Action: NavigateToView",
+        "body": "Actions.invokeAction(\"NavigateToView\", {viewName: \"my-custom-page\"});"
+    },
+    "HistoryPush": {
+        "prefix": "Twilio Flex Action: HistoryPush",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HistoryPush\", \"/teams/\");"
+    },
+    "HistoryReplace": {
+        "prefix": "Twilio Flex Action: HistoryReplace",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HistoryReplace\", \"/teams/\");"
+    },
+    "HistoryGo": {
+        "prefix": "Twilio Flex Action: HistoryGo",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HistoryGo\", -1);"
+    },
+    "HistoryGoBack": {
+        "prefix": "Twilio Flex Action: HistoryGoBack",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HistoryGoBack\");"
+    },
+    "HistoryGoForward": {
+        "prefix": "Twilio Flex Action: HistoryGoForward",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HistoryGoForward\");"
+    },
+    "ShowDirectory": {
+        "prefix": "Twilio Flex Action: ShowDirectory",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ShowDirectory\");"
+    },
+    "HideDirectory": {
+        "prefix": "Twilio Flex Action: HideDirectory",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HideDirectory\");"
+    },
+    "ToggleSidebar": {
+        "prefix": "Twilio Flex Action: ToggleSidebar",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ToggleSidebar\", {open: true});"
+    },
+    "SetComponentState": {
+        "prefix": "Twilio Flex Action: SetComponentState",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SetComponentState\", { name: \"AgentTaskCanvasTabs\", state: { selectedTabName: \"info\" } });"
+    },
+    "ReloadWindow": {
+        "prefix": "Twilio Flex Action: ReloadWindow",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ReloadWindow\");"
+    },
+    "MonitorCall": {
+        "prefix": "Twilio Flex Action: MonitorCall",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"MonitorCall\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "StopMonitoringCall": {
+        "prefix": "Twilio Flex Action: StopMonitoringCall",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"StopMonitoringCall\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "SelectTaskInSupervisor": {
+        "prefix": "Twilio Flex Action: SelectTaskInSupervisor",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SelectTaskInSupervisor\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "SelectWorkerInSupervisor": {
+        "prefix": "Twilio Flex Action: SelectWorkerInSupervisor",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SelectWorkerInSupervisor\", { workerSid: \"WKXXXXXXXXXXXXXXXXX\" });"
+    },
+    "ApplyTeamsViewFilters": {
+        "prefix": "Twilio Flex Action: ApplyTeamsViewFilters",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ApplyTeamsViewFilters\", {\n    filters: [\n        {\n            name: \"data.activity\",\n            condition: FilterConditions.IN,\n            values: [\"Idle\"]\n        }\n    ]\n});"
+    },
+    "ApplyTeamsViewSearch": {
+        "prefix": "Twilio Flex Action: ApplyTeamsViewSearch",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ApplyTeamsViewSearch\", {\n    search: \"John Smith\"\n});"
+    },
+    "ToggleMute": {
+        "prefix": "Twilio Flex Action: ToggleMute",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ToggleMute\");"
+    },
+    "HangupCall": {
+        "prefix": "Twilio Flex Action: HangupCall",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HangupCall\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "EndCall": {
+        "prefix": "Twilio Flex Action: EndCall",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"EndConferenceForAll\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "HoldCall": {
+        "prefix": "Twilio Flex Action: HoldCall",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HoldCall\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "UnholdCall": {
+        "prefix": "Twilio Flex Action: UnholdCall",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"UnholdCall\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "StartExternalWarmTransfer": {
+        "prefix": "Twilio Flex Action: StartExternalWarmTransfer",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"StartExternalWarmTransfer\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "AcceptTask": {
+        "prefix": "Twilio Flex Action: AcceptTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"AcceptTask\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "RejectTask": {
+        "prefix": "Twilio Flex Action: RejectTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"RejectTask\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "CompleteTask": {
+        "prefix": "Twilio Flex Action: CompleteTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"CompleteTask\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "WrapupTask": {
+        "prefix": "Twilio Flex Action: WrapupTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"WrapupTask\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "SelectTask": {
+        "prefix": "Twilio Flex Action: SelectTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SelectTask\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "SetActivity": {
+        "prefix": "Twilio Flex Action: SetActivity",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SetActivity\", { activitySid: \"WAXXXXXXXXXXXXXXXXX\" });"
+    },
+    "SetWorkerActivity": {
+        "prefix": "Twilio Flex Action: SetWorkerActivity",
+        "body": "Actions.invokeAction(\"SetWorkerActivity\", { workerSid: \"WKXXXXXXXXXXXXXXXXX\", activitySid: \"WAXXXXXXXXXXXXXXXXX\" })"
+    },
+    "TransferTask": {
+        "prefix": "Twilio Flex Action: TransferTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"TransferTask\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  targetSid: someWorker.sid,\n  options: { mode: \"COLD\"}\n});"
+    },
+    "KickParticipant": {
+        "prefix": "Twilio Flex Action: KickParticipant",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"KickParticipant\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  targetSid: participant.workerSid\n});"
+    },
+    "CancelTransfer": {
+        "prefix": "Twilio Flex Action: CancelTransfer",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"CancelTransfer\", { sid: \"WRXXXXXXXXXXXXXXXXX\" });"
+    },
+    "Logout": {
+        "prefix": "Twilio Flex Action: Logout",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"Logout\", { forceLogout: true });"
+    },
+    "HoldParticipant": {
+        "prefix": "Twilio Flex Action: HoldParticipant",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"HoldParticipant\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  targetSid: participant.workerSid\n});"
+    },
+    "UnholdParticipant": {
+        "prefix": "Twilio Flex Action: UnholdParticipant",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"UnholdParticipant\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  targetSid: participant.workerSid\n});"
+    },
+    "ToggleDTMFDialpad": {
+        "prefix": "Twilio Flex Action: ToggleDTMFDialpad",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"ToggleDTMFDialpad\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  open: true\n});"
+    },
+    "SetDTMFDialpadDigits": {
+        "prefix": "Twilio Flex Action: SetDTMFDialpadDigits",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SetDTMFDialpadDigits\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  digits: \"123\"\n});"
+    },
+    "SendDTMFDigits": {
+        "prefix": "Twilio Flex Action: SendDTMFDigits",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SendDTMFDigits\", {\n  sid: \"WRXXXXXXXXXXXXXXXXX\",\n  digits: \"5\"\n});"
+    },
+    "SetWorkerAttributes": {
+        "prefix": "Twilio Flex Action: SetWorkerAttributes",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"SetWorkerAttributes\", {\n  attributes: {\n    customWorkerAttribute: 1,\n    contact_uri: \"client:workerName\"\n  },\n  mergeExisting: true\n});"
+    },
+    "UpdateWorkerToken": {
+        "prefix": "Twilio Flex Action: UpdateWorkerToken",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"UpdateWorkerToken\", {\n  token: \"newToken\"\n});"
+    },
+    "SetTaskAttributes": {
+        "prefix": "Twilio Flex Action: SetTaskAttributes",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\n Actions.invokeAction(\"SetTaskAttributes\", {\n   sid: \"WRxxxxx\",\n   attributes: {},\n   mergeExisting: true\n});"
+    },
+    "IssueCallToWorker": {
+        "prefix": "Twilio Flex Action: IssueCallToWorker",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"IssueCallToWorker\", {\n  callerId: \"callerId\",\n  twiMLUrl: \"twiMLUrl\",\n  task: myTask\n});"
+    },
+    "DequeueTask": {
+        "prefix": "Twilio Flex Action: DequeueTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"DequeueTask\", {\n  task: myTask\n});"
+    },
+    "RedirectCallTask": {
+        "prefix": "Twilio Flex Action: RedirectCallTask",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"RedirectCallTask\", {\n  callerId: \"callerId\",\n  twiMLUrl: \"twiMLUrl\",\n  task: myTask\n});"
+    },
+    "UpdateWorkerParticipant": {
+        "prefix": "Twilio Flex Action: UpdateWorkerParticipant",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"UpdateWorkerParticipant\", {\n  task: myTask\n});"
+    },
+    "UpdateCustomerParticipant": {
+        "prefix": "Twilio Flex Action: UpdateCustomerParticipant",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"UpdateCustomerParticipant\", {\n  task: myTask\n});"
+    },
+    "InsightsPlayerPlay": {
+        "prefix": "Twilio Flex Action: InsightsPlayerPlay",
+        "body": "import * as Flex from \"@twilio/flex-ui\";\nFlex.Actions.invokeAction(\"InsightsPlayerPlay\", {segmentId: \"e5c46a75-0f56...\"})"
+    },
+    "InsightsPlayerInitialized": {
+        "prefix": "Twilio Flex Action: InsightsPlayerInitialized",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"InsightsPlayerInitialized\");"
+    },
+    "InsightsPlayerHide": {
+        "prefix": "Twilio Flex Action: InsightsPlayerHide",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"InsightsPlayerHide\");"
+    },
+    "InsightsPlayerShow": {
+        "prefix": "Twilio Flex Action: InsightsPlayerShow",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.invokeAction(\"InsightsPlayerShow\");"
+    },
+    "SendMessage": {
+        "prefix": "Twilio Flex Action: SendMessage",
+        "body": "Actions.invokeAction(\"SendMessage\", { body: \"some text\", conversationSid: \"unique_conversation_identifier\" });"
+    },
+    "SendTyping": {
+        "prefix": "Twilio Flex Action: SendTyping",
+        "body": "Actions.invokeAction(\"SendTyping\", { conversationSid: \"unique_conversation_identifier\" });"
+    },
+    "SetInputText": {
+        "prefix": "Twilio Flex Action: SetInputText",
+        "body": "Actions.invokeAction(\"SetInputText\", { body: \"some text\", conversationSid: \"unique_conversation_identifier\" });"
+    },
+    "AttachFiles": {
+        "prefix": "Twilio Flex Action: AttachFiles",
+        "body": "Actions.invokeAction(\"AttachFiles\", { files: [File], conversationSid: \"unique_conversation_identifier\" });"
+    },
+    "DetachFile": {
+        "prefix": "Twilio Flex Action: DetachFile",
+        "body": "Actions.invokeAction(\"DetachFile\", { file: File, conversationSid: \"unique_conversation_identifier\" });"
+    },
+    "DownloadMedia": {
+        "prefix": "Twilio Flex Action: DownloadMedia",
+        "body": "Actions.invokeAction(\"DownloadMedia\", { media, conversationSid });"
+    }
+}

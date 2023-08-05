@@ -1,93 +1,93 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import { FlexLinkTreeDataProvider } from "./views/links/FlexLinkTreeDataProvider";
-import {
-  openAdminDashboardCommandHandler,
-  openDocumentationCommandHandler,
-  openConsoleCommandHandler,
-} from "./commands/links";
 import { FlexDevelopTreeDataProvider } from "./views/develop/FlexDevelopTreeDataProvider";
-import {
-  createPluginCommandHandler,
-  createTemplateCommandHandler,
-  deployPluginCommandHandler,
-  disablePluginCommandHandler,
-  enablePluginCommandHandler,
-  runPluginCommandHandler,
-} from "./commands/plugins";
+import { FlexPluginTreeDataProvider } from "./views/plugins/FlexPluginTreeDataProvider";
+import FlexCommand from "./commands/FlexCommand";
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  const flexCommand = new FlexCommand();
+  const flexLinkProvider = new FlexLinkTreeDataProvider();
+  const flexDevelopProvider = new FlexDevelopTreeDataProvider();
+  const flexPluginProvider = new FlexPluginTreeDataProvider();
+
+  vscode.window.registerTreeDataProvider("links", flexLinkProvider);
+
+  vscode.window.registerTreeDataProvider("develop", flexDevelopProvider);
+
+  vscode.window.registerTreeDataProvider("plugins", flexPluginProvider);
+
   const openAdminDashboardCommand = vscode.commands.registerCommand(
     "twilio-flex.links.dashboard",
-    openAdminDashboardCommandHandler
+    flexCommand.openAdminDashboard
   );
   context.subscriptions.push(openAdminDashboardCommand);
 
   const openDocumentationCommand = vscode.commands.registerCommand(
     "twilio-flex.links.docs",
-    openDocumentationCommandHandler
+    flexCommand.openDocumentation
   );
   context.subscriptions.push(openDocumentationCommand);
 
   const openConsoleCommand = vscode.commands.registerCommand(
     "twilio-flex.links.console",
-    openConsoleCommandHandler
+    flexCommand.openConsole
   );
   context.subscriptions.push(openConsoleCommand);
 
+  const openApiReferenceCommand = vscode.commands.registerCommand(
+    "twilio-flex.links.api",
+    flexCommand.openApiReference
+  );
+  context.subscriptions.push(openApiReferenceCommand);
+
+  const openPluginDashboardCommand = vscode.commands.registerCommand(
+    "twilio-flex.links.plugins",
+    flexCommand.openPluginDashboard
+  );
+  context.subscriptions.push(openPluginDashboardCommand);
+
   const createPluginCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.create",
-    createPluginCommandHandler
+    flexCommand.createPlugin
   );
   context.subscriptions.push(createPluginCommand);
 
-  const createTemplateCommand = vscode.commands.registerCommand(
+  const createPluginFromTemplateCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.template",
-    createTemplateCommandHandler
+    flexCommand.createPluginWithTemplate
   );
-  context.subscriptions.push(createTemplateCommand);
+  context.subscriptions.push(createPluginFromTemplateCommand);
 
   const deployPluginCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.deploy",
-    deployPluginCommandHandler
+    flexCommand.deployPlugin
   );
   context.subscriptions.push(deployPluginCommand);
 
   const runPluginCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.run",
-    runPluginCommandHandler
+    flexCommand.runPlugin
   );
   context.subscriptions.push(runPluginCommand);
 
   const enablePluginCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.enable",
-    enablePluginCommandHandler
+    flexCommand.enablePlugin
   );
   context.subscriptions.push(enablePluginCommand);
 
   const disablePluginCommand = vscode.commands.registerCommand(
     "twilio-flex.plugins.disable",
-    disablePluginCommandHandler
+    flexCommand.disablePlugin
   );
   context.subscriptions.push(disablePluginCommand);
 
-  vscode.window.registerTreeDataProvider(
-    "links",
-    new FlexLinkTreeDataProvider()
+  const refreshPluginsCommand = vscode.commands.registerCommand(
+    "twilio-flex.plugins.refresh",
+    flexPluginProvider.refresh.bind(flexPluginProvider)
   );
 
-  vscode.window.registerTreeDataProvider(
-    "develop",
-    new FlexDevelopTreeDataProvider()
-  );
-  vscode.window.registerTreeDataProvider(
-    "develop",
-    new FlexDevelopTreeDataProvider()
-  );
+  context.subscriptions.push(refreshPluginsCommand);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}

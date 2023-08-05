@@ -1,0 +1,38 @@
+{
+    "registerAction": {
+      "prefix": "Twilio Flex Actions: registerAction",
+      "body": "import { Actions, ActionFunction, PayloadUpdateFunction } from \"@twilio/flex-ui\";\n\nconst myCustomAction = \"MyCustomAction\";\nconst myCustomActionFunction: ActionFunction = (payload) => Promise.resolve(payload);\nconst payloadUpdateFunction: PayloadUpdateFunction = (payload) => {\n  payload.updated = true;\n  return payload;\n};\nActions.registerAction(myCustomAction, myCustomActionFunction, payloadUpdateFunction);"
+    },
+    "invokeAction": {
+        "prefix": "Twilio Flex Actions: invokeAction",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\n\nActions.invokeAction(\"StartOutboundCall\", {\n  destination: \"+123456789\"\n});"
+    },
+    "replaceAction": {
+        "prefix": "Twilio Flex Actions: replaceAction",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.replaceAction(\"AcceptTask\", (payload, original) =>\n  new Promise((resolve, reject) => {\n    alert(\"replaced Action\");\n    resolve(undefined);\n  }).then(() => original(payload))\n);"
+    },
+    "addListener": {
+        "prefix": "Twilio Flex Actions: addListener",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nconst beforeAcceptTaskListener = (payload, abortFunction) => {\n  alert(\"Before event\");\n  if (!window.confirm(\"Are you sure you want to accept the task?\")) {\n    abortFunction();\n  }\n};\nActions.addListener(\"beforeAcceptTask\", beforeAcceptTaskListener);"
+    },
+    "removeListener": {
+        "prefix": "Twilio Flex Actions: removeListener",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.removeListener(\"beforeAcceptTask\", beforeAcceptTaskListener);"
+    },
+    "findPendingActions": {
+        "prefix": "Twilio Flex Actions: findPendingActions",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nconst pendingAcceptTaskInvocations = Actions.findPendingActions(\"AcceptTask\");"
+    },
+    "findBlockedActions": {
+        "prefix": "Twilio Flex Actions: findBlockedActions",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nconst blockedAcceptTaskInvocations = Actions.findBlockedActions(\"AcceptTask\");"
+    },
+    "blockAction": {
+        "prefix": "Twilio Flex Actions: blockAction",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.blockAction(\"AcceptTask\");"
+    },
+    "unblockAction": {
+        "prefix": "Twilio Flex Actions: unblockAction",
+        "body": "import { Actions } from \"@twilio/flex-ui\";\nActions.unblockAction(\"AcceptTask\");"
+    }
+}

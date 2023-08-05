@@ -28,13 +28,13 @@ export class FlexDevelopTreeDataProvider implements TreeDataProvider<TreeItem> {
   createLinks() {
     const linkAttributes: [string, string, ThemeIcon][] = [
       ["Create Plugin", "twilio-flex.plugins.create", new ThemeIcon("add")],
+      ["Deploy Plugin", "twilio-flex.plugins.deploy", new ThemeIcon("package")],
+      ["Run Plugin", "twilio-flex.plugins.run", new ThemeIcon("run")],
       [
-        "Create Plugin with Template",
+        "Open Project Template",
         "twilio-flex.plugins.template",
         new ThemeIcon("files"),
       ],
-      ["Deploy Plugin", "twilio-flex.plugins.deploy", new ThemeIcon("package")],
-      ["Run Plugin", "twilio-flex.plugins.run", new ThemeIcon("run")],
     ];
 
     const links = linkAttributes.map((element) => {
