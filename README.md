@@ -3,7 +3,7 @@
 This repository contains the code for a VSCode extension for Twilio Flex.
 
 ## Disclamer
-Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT.**. Some features may not work or not work correctly :warning: 
+Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT**. Some features may not work or may not work correctly! :warning: 
 
 ## Features
 
@@ -15,7 +15,7 @@ Currently, the extension can be used to:
 * [Manage plugins](###feature-manage)
 * [Develop with the Flex Project Template](###feature-template)
 * [Access documentation and relevant links](###feature-links)
-* [Access code snippets for common tasks](###feature-snippets)git
+* [Access code snippets for common tasks](###feature-snippets)
 
 
 
