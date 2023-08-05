@@ -1,6 +1,6 @@
 # Twilio Flex VSCode
 
-This is a VSCode extension for Twilio Flex.
+This repository contains the code for a VSCode extension for Twilio Flex.
 
 ## Disclamer
 Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT.**. Some features may not work or not work correctly :warning: 
@@ -9,17 +9,17 @@ Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT.**. Some features ma
 
 Currently, the extension can be used to:
 
-* [Create Flex Plugins](###feature-create)
-* [Deploy Flex Plugins](###feature-deploy)
-* [Run Flex Plugins](###feature-run)
-* [Manage Flex Plugins](###feature-manage)
+* [Create plugins](###feature-create)
+* [Deploy plugins](###feature-deploy)
+* [Run plugins](###feature-run)
+* [Manage plugins](###feature-manage)
 * [Develop with the Flex Project Template](###feature-template)
 * [Access documentation and relevant links](###feature-links)
-* [Access code snippets for common tasks](###feature-snippets)
+* [Access code snippets for common tasks](###feature-snippets)git
 
 
 
-directly from VSCode! P:cowboy_hat_face:	
+directly from VSCode!:cowboy_hat_face:	
 
 
 ## Setup
@@ -27,8 +27,8 @@ directly from VSCode! P:cowboy_hat_face:
 1. Ensure that you have the following dependencies installed:
     - **VSCode** version 1.80 or greater ([link](https://code.visualstudio.com/))
     - **Node** ([link](https://nodejs.org/en))
-    - **Twilio CLI** (instructions [here](https://www.twilio.com/docs/twilio-cli/quickstart))
-    - **Flex Plugins CLI**  (instructions [here](https://www.twilio.com/docs/flex/developer/plugins/cli/install))
+    - **Twilio CLI** ([link](https://www.twilio.com/docs/twilio-cli/quickstart))
+    - **Flex Plugins CLI**  ([link](https://www.twilio.com/docs/flex/developer/plugins/cli/install))
 
 2. Install [Yeoman](https://yeoman.io/), via: `npm install -g yo`
 3. Install the [VSCode Extension Manager](https://github.com/microsoft/vscode-vsce), via: `npm install -g @vscode/vsce`
