@@ -16,7 +16,6 @@ export class FlexPluginTreeDataProvider implements TreeDataProvider<TreeItem> {
   }
 
   refresh(): void {
-    console.log("REFRESH TRIGGERED");
     this._onDidChangeTreeData.fire();
   }
 
