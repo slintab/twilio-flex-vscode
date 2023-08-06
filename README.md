@@ -26,7 +26,7 @@ directly from VSCode!:cowboy_hat_face:
 
 Ensure that you have the following dependencies installed:
 - **Node** ([link](https://nodejs.org/en))
-- **VSCode** version 1.80 or greater ([link](https://code.visualstudio.com/))
+- **VSCode** version 1.80 or later ([link](https://code.visualstudio.com/))
 - **VSCode Extension Manager** (`npm install -g @vscode/vsce`)
 - **Twilio CLI** ([link](https://www.twilio.com/docs/twilio-cli/quickstart))
 - **Flex Plugins CLI**  ([link](https://www.twilio.com/docs/flex/developer/plugins/cli/install))
@@ -34,7 +34,7 @@ Ensure that you have the following dependencies installed:
 
 The extension can be installed using the included compiled extension file from the `.build` directory. To add and enable the extension in VSCode, run:
 ```bash
-code --install-extension build/<EXTENSION_NAME>.vsix`
+code --install-extension build/<EXTENSION_NAME>.vsix
 ```
 
 
