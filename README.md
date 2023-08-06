@@ -2,8 +2,10 @@
 
 This repository contains the code for a VSCode extension for Twilio Flex.
 
+
 ## Disclamer
 Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT**. Some features may not work or may not work correctly! :warning: 
+
 
 ## Features
 
@@ -17,9 +19,12 @@ Currently, the extension can be used to:
 * Access documentation
 * Access code snippets for common tasks
 
-
-
 directly from VSCode!:cowboy_hat_face:	
+
+
+## Demo
+
+![Demo](screenshot.jpg?raw=true)
 
 
 ## Setup
