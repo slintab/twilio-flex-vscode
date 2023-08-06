@@ -7,8 +7,7 @@ import {
   env,
 } from "vscode";
 import { resolve } from "path";
-import { runCommand } from "../common/utils";
-import degit = require("degit");
+import { downloadRepository, runCommand } from "../common/utils";
 
 const FLEX_PROJECT_TEMPLATE_SLUG =
   "twilio-professional-services/flex-project-template";
@@ -88,30 +87,25 @@ class FlexCommand {
 
     const destination = resolve(destinationFolder, name);
 
-    const repository = degit(FLEX_PROJECT_TEMPLATE_SLUG);
+    const result = await window.withProgress(
+      {
+        location: ProgressLocation.Notification,
+        title: "Downloading project template...",
+        cancellable: false,
+      },
+      (progress, token) => {
+        return downloadRepository(FLEX_PROJECT_TEMPLATE_SLUG, destination);
+      }
+    );
 
-    try {
-      await window.withProgress(
-        {
-          location: ProgressLocation.Notification,
-          title: "Downloading project template...",
-          cancellable: false,
-        },
-        (progress, token) => {
-          return repository.clone(destination);
-        }
-      );
-
-      await commands.executeCommand(
-        "vscode.openFolder",
-        Uri.file(destination),
-        {
-          forceNewWindow: false,
-        }
-      );
-    } catch {
+    if (!result) {
       window.showErrorMessage(`Error downloading project template.`);
+      return;
     }
+
+    await commands.executeCommand("vscode.openFolder", Uri.file(destination), {
+      forceNewWindow: false,
+    });
   }
 
   async deployPlugin() {

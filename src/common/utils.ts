@@ -1,4 +1,5 @@
 import * as cp from "child_process";
+import degit = require("degit");
 
 export async function runCommand(cmd: string, path?: string) {
   const options = path ? { cwd: path } : undefined;
@@ -32,4 +33,15 @@ export function extractPlugins(text: string) {
     result.push({ sid: pluginMatches[1], friendlyName: pluginMatches[2] });
   }
   return result;
+}
+
+export async function downloadRepository(slug: string, path: string) {
+  try {
+    const repository = degit(slug);
+    await repository.clone(path);
+    return true;
+  } catch (e) {
+    console.error(`Error downloading repository ${slug} to ${path}: `, e);
+  }
+  return false;
 }
