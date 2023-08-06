@@ -2,7 +2,8 @@
   "name": "twilio-flex-vscode",
   "displayName": "twilio-flex-vscode",
   "description": "VSCode extension for Twilio Flex",
-  "version": "0.2.0",
+  "publisher": "slintab",
+  "version": "0.6.0",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -17,7 +18,7 @@
         {
           "id": "twilio-flex",
           "title": "Twilio Flex",
-          "icon": "src/assets/flex-icon.svg"
+          "icon": "assets/flex-icon.svg"
         }
       ]
     },
@@ -34,11 +35,11 @@
       ],
       "view/title": [
         {
-            "command": "twilio-flex.plugins.refresh",
-            "when": "view == plugins",
-            "group": "navigation"
+          "command": "twilio-flex.plugins.refresh",
+          "when": "view == plugins",
+          "group": "navigation"
         }
-    ]
+      ]
     },
     "views": {
       "twilio-flex": [
@@ -105,41 +106,41 @@
         "command": "twilio-flex.plugins.refresh",
         "title": "Twilio Flex: Refresh plugins",
         "icon": "$(refresh)"
-    }
+      }
     ],
     "snippets": [
-			{
-				"language": "javascript",
-				"path": "./src/snippets/javascript/actions.json"
-			},
       {
-				"language": "javascript",
-				"path": "./src/snippets/javascript/actions-manager.json"
-			},
+        "language": "javascript",
+        "path": "./snippets/javascript/actions.json"
+      },
       {
-				"language": "javascript",
-				"path": "./src/snippets/javascript/events.json"
-			},
+        "language": "javascript",
+        "path": "./snippets/javascript/actions-manager.json"
+      },
       {
-				"language": "javascript",
-				"path": "./src/snippets/javascript/errors.json"
-			},
+        "language": "javascript",
+        "path": "./snippets/javascript/events.json"
+      },
       {
-				"language": "typescript",
-				"path": "./src/snippets/typescript/actions.json"
-			},
+        "language": "javascript",
+        "path": "./snippets/javascript/errors.json"
+      },
       {
-				"language": "typescript",
-				"path": "./src/snippets/typescript/actions-manager.json"
-			},
+        "language": "typescript",
+        "path": "./snippets/typescript/actions.json"
+      },
       {
-				"language": "typescript",
-				"path": "./src/snippets/typescript/events.json"
-			},
+        "language": "typescript",
+        "path": "./snippets/typescript/actions-manager.json"
+      },
       {
-				"language": "typescript",
-				"path": "./src/snippets/typescript/errors.json"
-			}
+        "language": "typescript",
+        "path": "./snippets/typescript/events.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript/errors.json"
+      }
     ]
   },
   "scripts": {
@@ -162,9 +163,9 @@
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.1.3",
-    "degit": "^2.8.4"
+    "typescript": "^5.1.3"
   },
   "dependencies": {
+    "degit": "^2.8.4"
   }
 }
