@@ -30,6 +30,8 @@ directly from VSCode!:cowboy_hat_face:
     - **VSCode Extension Manager** (`npm install -g @vscode/vsce`)
     - **Twilio CLI** ([link](https://www.twilio.com/docs/twilio-cli/quickstart))
     - **Flex Plugins CLI**  ([link](https://www.twilio.com/docs/flex/developer/plugins/cli/install))
+2. Compile the extension via `npm run compile`. This will result in an `out` directory being created.
+3. Copy the `assets` and `snippets` directories to the `out` directory.
 2. From the repository's root directory, generate an extension file with the command  `vsce package`. This will create a `.vsix` file.
 3. Import the `.vsix` file from the previous step with `code --install-extension <EXTENSION_FILE>.vsix`
 
