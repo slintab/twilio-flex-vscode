@@ -9,13 +9,13 @@ Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT**. Some features may
 
 Currently, the extension can be used to:
 
-* [Create plugins](###feature-create)
-* [Deploy plugins](###feature-deploy)
-* [Run plugins](###feature-run)
-* [Manage plugins](###feature-manage)
-* [Develop with the Flex Project Template](###feature-template)
-* [Access documentation and relevant links](###feature-links)
-* [Access code snippets for common tasks](###feature-snippets)
+* Create plugins
+* Deploy plugins
+* Run plugins
+* Manage plugins
+* Develop with the Flex Project Template
+* Access documentation
+* Access code snippets for common tasks
 
 
 
