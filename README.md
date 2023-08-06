@@ -24,7 +24,7 @@ directly from VSCode!:cowboy_hat_face:
 
 ## Demo
 
-![Demo](screenshot.jpg?raw=true)
+![Demo](demo.jpg?raw=true)
 
 
 ## Setup
