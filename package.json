@@ -2,6 +2,7 @@
   "name": "twilio-flex-vscode",
   "displayName": "twilio-flex-vscode",
   "description": "VSCode extension for Twilio Flex",
+  "icon": "assets/flex-icon.png",
   "publisher": "slintab",
   "version": "0.6.0",
   "engines": {
