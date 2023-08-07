@@ -1,13 +1,15 @@
-import {
-  window,
-  ProgressLocation,
-  commands,
-  Uri,
-  workspace,
-  env,
-} from "vscode";
+import { window, ProgressLocation, commands, Uri } from "vscode";
 import { resolve } from "path";
-import { downloadRepository, runCommand } from "../common/utils";
+import {
+  downloadRepository,
+  getDeploymentDescription,
+  getDestinationFolder,
+  getPluginName,
+  getTerminal,
+  openLink,
+  runCommand,
+  selectPluginLanguage,
+} from "../common/utils";
 
 const FLEX_PROJECT_TEMPLATE_SLUG =
   "twilio-professional-services/flex-project-template";
@@ -184,90 +186,6 @@ class FlexCommand {
     window.showInformationMessage(`Plugin ${label} has been disabled.`);
     await commands.executeCommand("twilio-flex.plugins.refresh");
   }
-}
-
-async function openLink(link: string) {
-  return env.openExternal(Uri.parse(link));
-}
-
-async function selectPluginLanguage() {
-  const language = await window.showQuickPick(
-    [
-      {
-        label: "JavaScript",
-        description: "Create new plugin using JavaScript",
-      },
-      {
-        label: "TypeScript",
-        description: "Create new plugin using TypeScript",
-      },
-    ],
-    {
-      placeHolder: "Choose the language for developing the plugin",
-      canPickMany: false,
-    }
-  );
-
-  return language;
-}
-
-async function getPluginName() {
-  const validationRegex = /^[a-zA-Z0-9_-]+$/;
-  const inValidNameMsg =
-    "The plugin name can only contain alphanumerical characters, underscores and hyphens.";
-  const validationFunc = (name: string) =>
-    validationRegex.test(name) ? null : inValidNameMsg;
-
-  const name = await window.showInputBox({
-    title: "Create plugin",
-    placeHolder: "Enter the name of the plugin",
-    validateInput: validationFunc,
-  });
-
-  return name;
-}
-
-async function getDestinationFolder() {
-  const destination = await window.showOpenDialog({
-    canSelectFolders: true,
-    canSelectFiles: false,
-    canSelectMany: false,
-    defaultUri: workspace.workspaceFolders
-      ? workspace.workspaceFolders[0].uri
-      : undefined,
-    openLabel: "Select folder",
-  });
-
-  return destination?.[0].path;
-}
-
-async function getDeploymentDescription() {
-  const description = await window.showInputBox({
-    title: "Deploy plugin",
-    placeHolder:
-      "Enter a description for the deployment (e.g. features added/removed).",
-  });
-
-  return description;
-}
-
-function getTerminal(command: string) {
-  const terminals = window.terminals;
-
-  const serverTerminals = terminals.filter((t) => {
-    return t.name === "server";
-  });
-  const otherTerminals = terminals.filter((t) => {
-    return t.name !== "server";
-  });
-
-  if (command === "start") {
-    return serverTerminals.length
-      ? serverTerminals[0]
-      : window.createTerminal("server");
-  }
-
-  return otherTerminals.length ? otherTerminals[0] : window.createTerminal();
 }
 
 export default FlexCommand;
