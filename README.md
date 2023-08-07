@@ -11,13 +11,11 @@ Please note that **THIS PROJECT IS UNDER ACTIVE DEVELOPMENT**. Some features may
 
 Currently, the extension can be used to:
 
-* Create plugins
-* Deploy plugins
-* Run plugins
-* Manage plugins
-* Develop with the Flex Project Template
-* Access documentation
-* Access code snippets for common tasks
+* Create, run and deploy plugins
+* List, enable and disable deployed plugins
+* Develop with the [Flex Project Template](https://github.com/twilio-professional-services/flex-project-template)
+* Access documentation and useful links
+* Generate code snippets for common tasks
 
 directly from VSCode!:cowboy_hat_face:	
 
