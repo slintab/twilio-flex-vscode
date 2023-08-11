@@ -40,9 +40,9 @@ Ensure that you have the following dependencies installed:
 
 #### Installing the extension
 
-The extension can be installed using the included compiled extension file from the `.build` directory. To add and enable the extension in VSCode, run:
+The extension can be installed by downloading the [latest release](https://github.com/slintab/twilio-flex-vscode/releases) and enabling it in VSCode using the command:
 ```bash
-code --install-extension build/<EXTENSION_NAME>.vsix
+code --install-extension <EXTENSION_NAME>.vsix
 ```
 
 
